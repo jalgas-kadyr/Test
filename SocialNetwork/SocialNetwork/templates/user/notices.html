@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} hahahaha {% endblock %}
+
+{% block content %}
+<h1>Messages</h1>
+{% for i in messages %}
+<div style="border:1px solid black;border-radius:3px; margin:5px;">
+    From:{{i.sender}}
+    <a href="http://192.168.1.104:8080/notice/{{i.id}}">More</a>
+</div>
+
+{% endfor %}
+{% endblock %}

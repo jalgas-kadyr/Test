@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} hahahaha {% endblock %}
+
+{% block content %}
+<div id="test">Username: {{user.username}}</div>
+<div>Name: {{user.name}}</div>
+<div>Surname: {{user.surname}}</div>
+<div>Age: {{user.age}}</div>
+<div>Mail: {{user.mail}}</div>
+<div type="password">Password: {{user.password}}</div>
+<form action="http://192.168.1.104:8080/users/list"><input type="submit" value="Users"></form>
+<form action="http://192.168.1.104:8080/friends/{{user.id}}"><input type="submit" value="Friends"></form>
+<a href="http://192.168.1.104:8080/notices/{{user.id}}">Notice
+{% if not notices %}
+    ({{len}})
+{% endif %}
+</a>
+{% endblock %}

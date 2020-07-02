@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} hahahaha {% endblock %}
+
+{% block content %}
+	{% if error_login == True %}
+		<div>error</div>
+	{% endif %}
+	<form action="http://192.168.1.104:8080/feed/" method="post">
+		{% csrf_token %}
+		<input placeholder="name" name="user_name"><br>
+		<input placeholder="pwd" name="pwd" type="password"><br>
+		<input type="submit">
+	</form>
+{% endblock %}

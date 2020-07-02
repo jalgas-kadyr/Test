@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %} hahahaha {% endblock %}
+
+{% block content %}
+{% for i in friends %}
+<a href="{% url 'detail' i.id %}">{{i.name}}</a><br>
+{% endfor %}
+{% endblock %}

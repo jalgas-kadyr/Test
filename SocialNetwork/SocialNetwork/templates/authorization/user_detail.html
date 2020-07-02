@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} test {% endblock %}
+
+{% block content %}
+<div>Username: {{user.username}}</div>
+<div>Name: {{user.name}}</div>
+<div>Surname: {{user.surname}}</div>
+<div>Age: {{user.age}}</div>
+<form action="http://192.168.1.104:8080/users/list"><input type="submit" value="Users"></form>
+{% if isfriend %}
+    <form action="http://192.168.1.104:8080/addfriend/{{user.id}}"><input type="submit" value="Add to friends"></form>
+{% else %}
+<form action="http://192.168.1.104:8080/chat/{{user.id}}"><input type="submit" value="Send message"></form>
+{% endif %}
+{% endblock %}

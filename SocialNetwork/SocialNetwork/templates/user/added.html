@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %} hahahaha {% endblock %}
+
+{% block content %}
+The {{user.username}} added to list of your friends <br>
+<a href="http://192.168.1.104:8080/feed/">Back to main page</a><br>
+<a href="http://192.168.1.104:8080/users/{{user.id}}">Back to profile of {{user.username}}</a><br>
+{% endblock %}

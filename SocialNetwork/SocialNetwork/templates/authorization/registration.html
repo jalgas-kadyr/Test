@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} test {% endblock %}
+
+{% block content %}
+<form method="post" action="http://192.168.1.104:8080/authorization/registration">
+    {% csrf_token %}
+    <input name="name" placeholder=name><br>
+    <input name="surname" placeholder=sur_name><br>
+    <input name="username" placeholder=user_name><br>
+    <input name="pwd" placeholder=pwd type="password"><br>
+    <input name="age" placeholder=age><br>
+    <input name="mail" placeholder=mail><br>
+    <input type="submit" placeholder=name>
+</form>
+
+{% endblock %}

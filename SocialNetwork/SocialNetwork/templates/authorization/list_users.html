@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %} Users {% endblock %}
+
+{% block content %}
+    {% for i in users %}
+        <a href="{% url 'detail' i.id %}">{{i.name}}</a>
+    {%endfor%}
+{% endblock %}
